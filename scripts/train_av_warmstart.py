@@ -69,9 +69,8 @@ def train_av():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
-        dtype=torch.float16,
-        device_map="auto"
-    )
+        dtype=torch.float16) 
+    
     
     # Load dataset
     print("2. Loading (activation, summary) pairs...")
