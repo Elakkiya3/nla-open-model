@@ -97,6 +97,65 @@ def create_sample_texts():
         "The brain controls movement and thought. Neurons transmit signals throughout the nervous system.",
         "Painting uses color and form to create visual art. Sculpture shapes three-dimensional materials.",
         "Music combines rhythm, melody, and harmony. Dance expresses emotion through movement.",
+        # Mathematics
+        "Linear algebra studies vectors, matrices, and transformations. Calculus analyzes rates of change and accumulation.",
+        "Probability theory models uncertainty and randomness. Statistics helps interpret data distributions.",
+        "Number theory investigates properties of integers. Prime numbers play a central role in cryptography.",
+        "Topology studies geometric properties preserved under deformation. Differential equations describe dynamic systems.",
+
+        # Programming
+        "Python is widely used for machine learning and automation. Functions and classes improve code organization.",
+        "Algorithms optimize computational efficiency. Data structures enable fast retrieval and storage.",
+        "Software engineering focuses on scalable system design. Debugging helps identify logical errors in programs.",
+        "Databases store structured information efficiently. SQL enables querying relational datasets.",
+
+        # Astronomy
+        "Galaxies contain billions of stars bound by gravity. Black holes distort spacetime through intense mass.",
+        "The solar system includes planets, moons, and asteroids. Telescopes help scientists observe distant objects.",
+        "Supernova explosions distribute heavy elements across space. Cosmology studies the origin of the universe.",
+        "Dark matter influences galactic motion despite being invisible. Exoplanets orbit stars beyond our solar system.",
+
+        # Linguistics
+        "Linguistics studies language structure and communication. Syntax governs sentence organization.",
+        "Phonetics analyzes speech sounds and pronunciation. Semantics examines meaning in language.",
+        "Languages evolve over time through cultural interaction. Translation requires contextual understanding.",
+        "Grammar rules shape how sentences are interpreted. Pragmatics studies language use in social situations.",
+
+        # Neuroscience
+        "Neuroscience investigates how the brain processes information. Synapses transmit signals between neurons.",
+        "Memory formation depends on neural plasticity. Cognitive science explores perception and reasoning.",
+        "The cerebral cortex supports higher-order thinking. Dopamine influences motivation and reward systems.",
+        "Brain imaging technologies reveal patterns of neural activity. Sleep is important for memory consolidation.",
+
+        # Philosophy
+        "Philosophy examines knowledge, ethics, and existence. Logic provides rules for valid reasoning.",
+        "Ancient philosophers debated the nature of reality. Moral philosophy studies principles of right and wrong.",
+        "Existentialism explores freedom and human meaning. Epistemology investigates how knowledge is acquired.",
+        "Metaphysics studies causality and the structure of reality. Critical thinking evaluates assumptions systematically.",
+
+        # Law
+        "Constitutional law defines the structure of government. Courts interpret legal principles and precedents.",
+        "Criminal law addresses offenses against society. Evidence is essential during legal proceedings.",
+        "International law governs relations between nations. Human rights law protects individual freedoms.",
+        "Contracts establish enforceable agreements between parties. Intellectual property protects creative works.",
+
+        # Robotics
+        "Robotics combines mechanics, electronics, and artificial intelligence. Sensors help robots navigate environments.",
+        "Autonomous systems make decisions without human intervention. Industrial robots improve manufacturing efficiency.",
+        "Computer vision enables robots to recognize objects. Reinforcement learning improves robotic control policies.",
+        "Humanoid robots imitate human movement patterns. Motion planning algorithms optimize navigation paths.",
+
+        # Cybersecurity
+        "Cybersecurity protects systems from digital attacks. Encryption secures sensitive information.",
+        "Network security prevents unauthorized access to data. Firewalls monitor incoming and outgoing traffic.",
+        "Malware can disrupt computer operations and steal information. Authentication systems verify user identity.",
+        "Ethical hackers identify vulnerabilities before attackers exploit them. Cyber defense requires continuous monitoring.",
+
+        # Climate Science
+        "Climate change affects global temperatures and weather patterns. Greenhouse gases trap heat in the atmosphere.",
+        "Renewable energy reduces dependence on fossil fuels. Carbon emissions contribute to environmental warming.",
+        "Ocean currents influence regional climates worldwide. Deforestation impacts biodiversity and ecosystems.",
+        "Climate models simulate future environmental conditions. Sustainable development balances growth and conservation.",
     ]
     
     expanded = []
@@ -117,7 +176,15 @@ def main():
     print("\n1. Creating sample texts...")
     texts = create_sample_texts()
     random.shuffle(texts)
-    texts = texts[:250]
+    expanded = []
+
+    for _ in range(10):
+        for text in texts:
+            expanded.append(text)
+
+    random.shuffle(expanded)
+
+    texts = expanded[:120]
     print(f"   Created {len(texts)} text samples")
     
     print(f"\n2. Loading model...")
