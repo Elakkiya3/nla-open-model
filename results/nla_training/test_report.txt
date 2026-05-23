@@ -1,0 +1,29 @@
+
+TRAINING SUMMARY REPORT
+========================
+
+Data:
+  Activation-summary pairs: 20
+  Activation dimension: 896
+  
+Training Results:
+  Total steps: 300
+  Initial FVE: -9.3748
+  Final FVE: 0.6573
+  Best FVE: 0.8281
+  Mean FVE: 0.3361
+  Std Dev: 1.1994
+  
+Loss:
+  Initial loss: 1021.105042
+  Final loss: 29.825884
+  Best loss: 16.279554
+  
+Model:
+  Checkpoint: results\nla_training\ar_final.pt
+  Size: Fully saved and loadable
+  
+Visualizations:
+  Training curve: results\nla_training\training_results.png
+  FVE history: results\nla_training\fve_history.npy
+  Loss history: results\nla_training\loss_history.npy
